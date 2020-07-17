@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Alunos</title>
+</head>
+<body>
+    <h1>NOVO ALUNO:</h1>
+    <form action="#" method="post" th:object="${aluno}" th:action="@{/salvar}">
+        Nome:       <input type="text" th:field="*{nome}" />    <br/>
+        Escola:     <input type="text" th:field="*{escola}"/>   <br/>
+        Telefone:   <input type="tel"  th:field="*{telefone}"/> <br/>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

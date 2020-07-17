@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar cadastro aluno</title>
+</head>
+<body>
+<h3>
+    EDITAR ALUNO
+</h3>
+<form action="#" th:action="@{/salvar}" method="post" th:object="${aluno}">
+    Id:         <input type="text" th:field="*{id}" readonly/>  <br/>
+    Nome:       <input type="text" th:field="*{nome}" />        <br/>
+    Escola:     <input type="text" th:field="*{escola}"/>       <br/>
+    Telefone:   <input type="tel"  th:field="*{telefone}"/>     <br/>
+    <button type="submit">Salvar</button>
+</form>
+
+</body>
+</html>
