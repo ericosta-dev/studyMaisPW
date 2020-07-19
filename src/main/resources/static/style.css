@@ -1,0 +1,46 @@
+
+form{
+   padding: 15px;
+   border-style: solid;
+    border-width: 1px;
+   border-color: #959595;
+   width: 310px;
+   border-radius: 15px;
+   /* margin-left: 35%; */
+    margin: auto;
+
+}
+body{
+    text-align: center;
+}
+
+span{
+    width: 80px;
+}
+
+input{
+    width: 195px;
+}
+
+.table{
+    margin-left: 15%;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+}
+
+#novoAluno{
+    margin-left: 15%;
+    text-decoration: white;
+}
+
+.headder{
+    color: red;
+    font-weight: bold;
+}
+.func_form{
+    color: #64a3ff;
+}
+#salvar{
+    width: auto;
+}
