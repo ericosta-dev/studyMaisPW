@@ -18,5 +18,4 @@ public class AulaController {
     public Aula insert(Aula a){
         return aulaRepository.save(a);
     }
-
 }

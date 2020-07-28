@@ -31,8 +31,4 @@ public class Materia {
             inverseJoinColumns = @JoinColumn(name = "aluno_id")
     )
     List<Aluno> alunos;
-
-
-
-
 }
