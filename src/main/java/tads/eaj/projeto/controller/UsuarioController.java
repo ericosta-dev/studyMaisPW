@@ -3,28 +3,28 @@ package tads.eaj.projeto.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tads.eaj.projeto.model.Aluno;
-import tads.eaj.projeto.service.AlunoService;
+import tads.eaj.projeto.model.Usuario;
+import tads.eaj.projeto.service.UsuarioService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/aluno")
-public class AlunoController {
-    private AlunoService service;
+@RequestMapping("/usuario")
+public class UsuarioController {
+    private UsuarioService service;
 
     @Autowired
-    public void setService(AlunoService service){
+    public void setService(UsuarioService service){
         this.service = service;
     }
 
     @GetMapping
-    public List<Aluno> listAll(){
+    public List<Usuario> listAll(){
         return service.getAll();
     }
 
     @GetMapping(path = "/{id}")
-    public ResponseEntity<Aluno> getOne(@PathVariable Long id){
+    public ResponseEntity<Usuario> getOne(@PathVariable Long id){
 
         return service
                 .findById(id)
@@ -34,17 +34,17 @@ public class AlunoController {
     }
 
     @PostMapping
-    public Aluno insert(@RequestBody Aluno a){
-        return service.insert(a);
+    public Usuario insert(@RequestBody Usuario u){
+        return service.insert(u);
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<Aluno> update(@PathVariable Long id, @RequestBody Aluno a){
+    public ResponseEntity<Usuario> update(@PathVariable Long id, @RequestBody Usuario u){
         return service
                 .findById(id)
                 .map( record -> {
-                    service.saveAndFlush(a);
-                    return ResponseEntity.ok().body(a);
+                    service.saveAndFlush(u);
+                    return ResponseEntity.ok().body(u);
 
                 }).orElse(ResponseEntity.notFound().build());
     }
