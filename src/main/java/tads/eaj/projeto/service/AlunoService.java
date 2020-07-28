@@ -7,6 +7,7 @@ import tads.eaj.projeto.model.Aluno;
 import tads.eaj.projeto.repository.AlunoRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AlunoService {
@@ -31,10 +32,18 @@ public class AlunoService {
     }
 
     public Aluno getOne(Long id){
-        return alunoRepository.getOne(id);
+        return alunoRepository.findById(id).orElse(null);
+    }
+
+    public Optional<Aluno> findById(Long id){
+        return alunoRepository.findById(id);
     }
 
     public List<Aluno> getAll(){
         return alunoRepository.findAll();
+    }
+
+    public Aluno saveAndFlush(Aluno a){
+        return alunoRepository.saveAndFlush(a);
     }
 }
