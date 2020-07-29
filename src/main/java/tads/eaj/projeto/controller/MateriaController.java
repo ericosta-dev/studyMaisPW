@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/materia")
+@CrossOrigin(origins = {"http://localhost:3000"}, exposedHeaders = "X-Total-Count")
 public class MateriaController {
     private MateriaService service;
 

@@ -18,7 +18,7 @@ public class Professor {
     Long id;
 
     String nome;
-    Integer telefone;
+    String telefone;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true, mappedBy = "professor")
     @JsonManagedReference

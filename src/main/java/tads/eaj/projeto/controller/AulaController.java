@@ -11,6 +11,7 @@ import java.util.List;
 
 @Service
 @RequestMapping("/aula")
+@CrossOrigin(origins = {"http://localhost:3000"}, exposedHeaders = "X-Total-Count")
 public class AulaController {
 
     private AulaService service;

@@ -9,7 +9,7 @@ import tads.eaj.projeto.service.ProfessorService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/professor")
+@RequestMapping("/professor")@CrossOrigin(origins = {"http://localhost:3000"}, exposedHeaders = "X-Total-Count")
 public class ProfessorController {
     private ProfessorService service;
 

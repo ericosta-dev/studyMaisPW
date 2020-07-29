@@ -1,6 +1,5 @@
 package tads.eaj.projeto.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tads.eaj.projeto.model.Aluno;
@@ -10,10 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/aluno")
+@CrossOrigin(origins = {"http://localhost:3000"}, exposedHeaders = "X-Total-Count")
 public class AlunoController {
     private AlunoService service;
 
-    @Autowired
     public void setService(AlunoService service){
         this.service = service;
     }
